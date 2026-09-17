@@ -1,0 +1,106 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "cold-chain-insulin-glargine-001",
+  "identifier": [
+    {
+      "system": "https://hospital.org/orders",
+      "value": "ORD-2026-CC-89421"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "inpatient",
+          "display": "Inpatient"
+        }
+      ]
+    }
+  ],
+  "priority": "urgent",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "285018",
+        "display": "insulin glargine 100 UNT/ML Injectable Solution [Lantus]"
+      }
+    ],
+    "text": "Lantus (insulin glargine) 100 units/mL subcutaneous solution"
+  },
+  "subject": {
+    "reference": "Patient/ipd-pat-89124",
+    "display": "Eleanor Vance"
+  },
+  "encounter": {
+    "reference": "Encounter/ipd-enc-4021",
+    "display": "Inpatient Admission - Room 402 Bed B"
+  },
+  "authoredOn": "2026-09-17T18:30:00Z",
+  "requester": {
+    "reference": "Practitioner/dr-4019",
+    "display": "Dr. Gregory House, MD"
+  },
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "text": "20 Units Subcutaneously at bedtime (QHS)",
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "206007",
+            "display": "Subcutaneous route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "Ordered"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 20,
+            "unit": "UNT",
+            "system": "http://unitsofmeasure.org",
+            "code": "[IU]"
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "validityPeriod": {
+      "start": "2026-09-17T18:30:00Z",
+      "end": "2026-09-24T18:30:00Z"
+    },
+    "numberOfRepeatsAllowed": 0,
+    "quantity": {
+      "value": 1,
+      "unit": "Vial (10 mL)",
+      "system": "http://unitsofmeasure.org",
+      "code": "1"
+    }
+  },
+  "note": [
+    {
+      "text": "Cold Chain Protocol Required: Keep refrigerated 2°C to 8°C (36°F to 46°F). Do not freeze."
+    }
+  ]
+}

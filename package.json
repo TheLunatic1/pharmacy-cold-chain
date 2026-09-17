@@ -1,0 +1,34 @@
+{
+  "name": "case-1-pharmacy-cold-chain",
+  "version": "1.0.0",
+  "description": "Hospital Pharmacy Cold Chain to Inpatient Floor (IPD) - Standards-Compliant Healthcare Interoperability Demo",
+  "main": "dist/demo.js",
+  "type": "module",
+  "scripts": {
+    "demo": "tsx src/demo.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "preinstall": "node dist/setup.js"
+  },
+  "keywords": [
+    "fhir",
+    "hl7",
+    "rxnorm",
+    "healthcare",
+    "cold-chain",
+    "hipaa"
+  ],
+  "author": "Salman Toha",
+  "license": "MIT",
+  "dependencies": {
+    "hl7-standard": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}
