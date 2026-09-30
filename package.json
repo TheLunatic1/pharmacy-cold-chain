@@ -9,8 +9,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsc --noEmit",
-    "typecheck": "tsc --noEmit",
-    "preinstall": "node dist/setup.js"
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "fhir",
